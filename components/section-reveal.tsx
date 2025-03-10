@@ -19,7 +19,7 @@ export default function SectionReveal({
   className = "",
   immediate = false,
 }: SectionRevealProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
   const [isInitiallyVisible, setIsInitiallyVisible] = useState(false)
 

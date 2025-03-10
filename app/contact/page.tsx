@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Github, Linkedin, Twitter, MapPin, Phone } from "lucide-react"
 import SectionReveal from "@/components/section-reveal"
@@ -14,14 +14,14 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Form submission logic would go here
     console.log(formState)
