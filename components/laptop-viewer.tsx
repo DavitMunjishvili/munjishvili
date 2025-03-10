@@ -13,7 +13,7 @@ interface LaptopProps {
 
 function Laptop({ isInteracting }: LaptopProps) {
   const { width } = useWindowResize();
-  const laptop = useFBX("/laptop-3.fbx");
+  const laptop = useFBX("/laptop.fbx");
 
   const laptopRef = useRef<Group>(null);
   const rotationRef = useRef(0);
@@ -37,7 +37,6 @@ function Laptop({ isInteracting }: LaptopProps) {
       }
 
       laptopRef.current.rotation.y = rotationRef.current;
-      laptopRef.current.rotation.x = rotationRef.current;
     }
   });
 
@@ -76,7 +75,7 @@ export default function LaptopViewer() {
     <Canvas
       onResize={console.log}
       shadows
-      camera={{ position: [5, 2, 5], fov: 50 }}
+      camera={{ position: [0, 6, 6], fov: 50 }}
     >
       <ambientLight intensity={0.3} />
       <spotLight
