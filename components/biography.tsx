@@ -34,7 +34,7 @@ export default function Biography() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/Anonymous.svg"
                 alt={content.name}
                 width={500}
                 height={500}

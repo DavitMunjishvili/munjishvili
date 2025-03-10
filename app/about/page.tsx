@@ -29,20 +29,20 @@ export default function AboutPage() {
             </motion.h1>
           </SectionReveal>
 
-          <div className="grid md:grid-cols-2 gap-12 items-baseline max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <SectionReveal
               direction="right"
-              className="md:sticky top-24"
+              className="md:sticky md:top-24 h-max"
               delay={0.2}
               immediate={true}
             >
               <motion.div
-                className="w-full aspect-square bg-gray-900 max-w-md mx-auto overflow-hidden rounded-2xl"
+                className="w-full aspect-square bg-gray-900 p-2 max-w-md mx-auto overflow-hidden rounded-2xl"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/Anonymous.svg"
                   alt={content.name}
                   width={400}
                   height={400}
