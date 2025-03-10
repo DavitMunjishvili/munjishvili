@@ -8,7 +8,7 @@ import content from "./content";
 
 export default function Biography() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-background to-background/80">
+    <section className="relative overflow-hidden py-24 px-4 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
