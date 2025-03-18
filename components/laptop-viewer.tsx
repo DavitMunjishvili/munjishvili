@@ -54,10 +54,21 @@ function Laptop({ isInteracting }: LaptopProps) {
       laptopRef.current!.scale.set(scaleMap[768], scaleMap[768], scaleMap[768]);
     }
     if (width < 1024) {
-      laptopRef.current!.scale.set(scaleMap[1024], scaleMap[1024], scaleMap[1024]);
+      laptopRef.current!.scale.set(
+        scaleMap[1024],
+        scaleMap[1024],
+        scaleMap[1024],
+      );
     }
-    if (width < 1536) {
-      laptopRef.current!.scale.set(scaleMap[1536], scaleMap[1536], scaleMap[1536]);
+    if (width <= 1536) {
+      laptopRef.current!.scale.set(
+        scaleMap[1536],
+        scaleMap[1536],
+        scaleMap[1536],
+      );
+    }
+    if (width > 1536) {
+      laptopRef.current!.scale.set(0.11, 0.11, 0.11);
     }
   }, [width]);
 
@@ -72,10 +83,7 @@ export default function LaptopViewer() {
   const [isInteracting, setIsInteracting] = useState<boolean>(false);
 
   return (
-    <Canvas
-      shadows
-      camera={{ position: [0, 6, 6], fov: 50 }}
-    >
+    <Canvas shadows camera={{ position: [0, 6, 6], fov: 50 }}>
       <ambientLight intensity={0.3} />
       <spotLight
         position={[10, 10, 10]}
