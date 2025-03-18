@@ -13,7 +13,7 @@ interface LaptopProps {
 
 function Laptop({ isInteracting }: LaptopProps) {
   const { width } = useWindowResize();
-  const laptop = useFBX("/laptop.fbx");
+  const laptop = useFBX("/laptop/laptop.fbx");
 
   const laptopRef = useRef<Group>(null);
   const rotationRef = useRef(0);
