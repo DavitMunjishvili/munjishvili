@@ -73,7 +73,6 @@ export default function LaptopViewer() {
 
   return (
     <Canvas
-      onResize={console.log}
       shadows
       camera={{ position: [0, 6, 6], fov: 50 }}
     >
