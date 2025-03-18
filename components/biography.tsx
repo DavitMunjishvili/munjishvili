@@ -34,7 +34,7 @@ export default function Biography() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="/Anonymous.svg"
+                src="/me.jpg"
                 alt={content.name}
                 width={500}
                 height={500}

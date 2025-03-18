@@ -37,12 +37,12 @@ export default function AboutPage() {
               immediate={true}
             >
               <motion.div
-                className="w-full aspect-square bg-gray-900 p-2 max-w-md mx-auto overflow-hidden rounded-2xl"
+                className="w-full aspect-square flex justify-center items-stretch max-w-[400px] mx-auto overflow-hidden rounded-2xl"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/Anonymous.svg"
+                  src="/me.jpg"
                   alt={content.name}
                   width={400}
                   height={400}

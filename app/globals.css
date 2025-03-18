@@ -155,19 +155,16 @@
 }
 
 
-html,
-body {
+html {
   color: hsl(var(--foreground));
   min-height: 100vh;
-  background: linear-gradient(to bottom right,
-      var(--gradient-dark-from),
-      var(--gradient-dark-via),
-      var(--gradient-dark-to));
+  background: var(--gradient-dark-to);
 }
 
 body {
   display: flex;
   flex-direction: column;
+  color: hsl(var(--foreground));
   min-height: 100vh;
   background: linear-gradient(to bottom right,
       var(--gradient-dark-from),
