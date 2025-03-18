@@ -83,13 +83,13 @@ export default function Hero() {
             {/*   View My Work */}
             {/* </motion.button> */}
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full text-primary-foreground font-medium text-lg"
-            >
-              Download Resume
-            </motion.button>
+            {/* <motion.button */}
+            {/*   whileHover={{ scale: 1.05 }} */}
+            {/*   whileTap={{ scale: 0.95 }} */}
+            {/*   className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full text-primary-foreground font-medium text-lg" */}
+            {/* > */}
+            {/*   Download Resume */}
+            {/* </motion.button> */}
           </motion.div>
 
           <motion.div
