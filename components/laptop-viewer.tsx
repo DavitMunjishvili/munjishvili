@@ -1,11 +1,12 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, OrbitControls, useFBX } from "@react-three/drei";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Group } from "three";
 import { useEffect, useRef, useState } from "react";
 import { animated, useSpring } from "@react-spring/three";
 import useWindowResize from "@/lib/use-window-resize";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 interface LaptopProps {
   isInteracting: boolean;
@@ -13,14 +14,16 @@ interface LaptopProps {
 
 function Laptop({ isInteracting }: LaptopProps) {
   const { width } = useWindowResize();
-  const laptop = useFBX("/laptop/laptop.fbx");
+
+  const url = "/new-laptop/laptop.gltf";
+  const gltf = useLoader(GLTFLoader, url);
 
   const laptopRef = useRef<Group>(null);
   const rotationRef = useRef(0);
   const directionRef = useRef(1);
 
   const { positionY } = useSpring({
-    positionY: isInteracting ? 0 : 0.2,
+    positionY: isInteracting ? -0.2 : 0,
     config: { mass: 1, tension: 100, friction: 10 },
     loop: { reverse: true },
   });
@@ -41,40 +44,36 @@ function Laptop({ isInteracting }: LaptopProps) {
   });
 
   useEffect(() => {
+    if (!laptopRef.current) return;
     const scaleMap = {
-      1536: 0.1,
-      1024: 0.09,
-      768: 0.07,
-      640: 0.05,
+      640: 10.5,
+      768: 10.7,
+      1024: 10.9,
+      1536: 11.1,
+      default: 11.5,
     };
     if (width < 640) {
-      laptopRef.current!.scale.set(scaleMap[640], scaleMap[640], scaleMap[640]);
+      laptopRef.current.scale.setScalar(scaleMap[640]);
+      return;
     }
     if (width < 768) {
-      laptopRef.current!.scale.set(scaleMap[768], scaleMap[768], scaleMap[768]);
+      laptopRef.current.scale.setScalar(scaleMap[768]);
+      return;
     }
     if (width < 1024) {
-      laptopRef.current!.scale.set(
-        scaleMap[1024],
-        scaleMap[1024],
-        scaleMap[1024],
-      );
+      laptopRef.current.scale.setScalar(scaleMap[1024]);
+      return;
     }
-    if (width <= 1536) {
-      laptopRef.current!.scale.set(
-        scaleMap[1536],
-        scaleMap[1536],
-        scaleMap[1536],
-      );
+    if (width < 1536) {
+      laptopRef.current.scale.setScalar(scaleMap[1536]);
+      return;
     }
-    if (width > 1536) {
-      laptopRef.current!.scale.set(0.11, 0.11, 0.11);
-    }
+    laptopRef.current.scale.setScalar(scaleMap.default);
   }, [width]);
 
   return (
     <animated.group ref={laptopRef} position-y={positionY}>
-      <primitive object={laptop} />
+      <primitive object={gltf.scene} />
     </animated.group>
   );
 }
@@ -103,7 +102,7 @@ export default function LaptopViewer() {
         onEnd={() => setIsInteracting(false)}
       />
 
-      <Environment preset="night" />
+      <Environment preset="sunset" />
     </Canvas>
   );
 }
