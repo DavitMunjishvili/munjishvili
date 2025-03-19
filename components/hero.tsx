@@ -158,7 +158,7 @@ export default function Hero() {
           repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
         }}
-        className="absolute bottom-8"
+        className="absolute bottom-8 z-20"
       >
         <ArrowDownCircle className="w-10 h-10 text-muted-foreground" />
       </motion.div>
