@@ -15,7 +15,7 @@ interface LaptopProps {
 function Laptop({ isInteracting }: LaptopProps) {
   const { width } = useWindowResize();
 
-  const url = "/new-laptop/laptop.gltf";
+  const url = "/laptop/laptop.gltf";
   const gltf = useLoader(GLTFLoader, url);
 
   const laptopRef = useRef<Group>(null);
