@@ -3,7 +3,7 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Group } from "three";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { animated, useSpring } from "@react-spring/three";
 import useWindowResize from "@/lib/use-window-resize";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -82,17 +82,14 @@ export default function LaptopViewer() {
   const [isInteracting, setIsInteracting] = useState<boolean>(false);
 
   return (
-    <Canvas shadows camera={{ position: [0, 6, 6], fov: 50 }}>
-      <ambientLight intensity={0.3} />
-      <spotLight
-        position={[10, 10, 10]}
-        angle={0.15}
-        penumbra={1}
-        intensity={1}
-        castShadow
-      />
+    <Canvas camera={{ position: [0, 6, 6], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[-2, 5, 2]} intensity={1} />
 
-      <Laptop isInteracting={isInteracting} />
+      <Suspense fallback={null}>
+        <Laptop isInteracting={isInteracting} />
+        <Environment preset="sunset" />
+      </Suspense>
 
       <OrbitControls
         enablePan={false}
@@ -101,8 +98,6 @@ export default function LaptopViewer() {
         onStart={() => setIsInteracting(true)}
         onEnd={() => setIsInteracting(false)}
       />
-
-      <Environment preset="sunset" />
     </Canvas>
   );
 }

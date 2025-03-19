@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { animated, useSpring } from "@react-spring/three";
 import { Group } from "three";
 
-function Model() {
+function Phone() {
   const url = "/phone/scene.gltf";
   const gltf = useLoader(GLTFLoader, url);
   const phoneRef = useRef<Group>(null);
@@ -43,14 +43,14 @@ function Model() {
   );
 }
 
-export default function ThreeScene() {
+export default function PhoneViewer() {
   return (
     <Canvas camera={{ position: [-5, 0, 0] }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[-2, 5, 2]} intensity={1} />
 
       <Suspense fallback={null}>
-        <Model />
+        <Phone />
         <Environment preset="sunset" />
       </Suspense>
 
