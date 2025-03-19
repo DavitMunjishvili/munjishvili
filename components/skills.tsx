@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import content from "./content"
+import { motion } from "framer-motion";
+import content from "./content";
 
 export default function Skills() {
   return (
@@ -36,7 +36,9 @@ export default function Skills() {
                 >
                   {skill.icon}
                 </motion.div>
-                <h3 className="text-xl font-bold text-foreground">{skill.category}</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  {skill.category}
+                </h3>
               </div>
 
               <ul className="space-y-2">
@@ -49,9 +51,7 @@ export default function Skills() {
                     transition={{ duration: 0.3 }}
                     viewport={{ once: true }}
                   >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full bg-primary/70 mr-2"
-                    ></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/70 mr-2"></span>
                     {tech}
                   </motion.li>
                 ))}
@@ -61,6 +61,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

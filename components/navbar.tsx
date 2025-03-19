@@ -68,9 +68,7 @@ export default function Navbar() {
               >
                 {item.name}
                 {isActive(item.path) && (
-                  <span
-                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-primary to-secondary"
-                  />
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-primary to-secondary" />
                 )}
               </Link>
             ))}

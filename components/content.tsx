@@ -109,7 +109,7 @@ const content = {
     {
       colors: {
         bg: "bg-blue-600",
-        border: "border-blue-600"
+        border: "border-blue-600",
       },
       title: "Software Engineer",
       company: "Pulsar AI / Impel",
@@ -120,7 +120,7 @@ const content = {
     {
       colors: {
         bg: "bg-purple-600",
-        border: "border-purple-600"
+        border: "border-purple-600",
       },
       title: "Software Engineer (Contractor)",
       company: "T-NET",
@@ -131,7 +131,7 @@ const content = {
     {
       colors: {
         bg: "bg-blue-400",
-        border: "border-blue-400"
+        border: "border-blue-400",
       },
       title: "Full Stack Developer (Contractor)",
       company: "Everse",
@@ -142,7 +142,7 @@ const content = {
     {
       colors: {
         bg: "bg-green-400",
-        border: "border-green-400"
+        border: "border-green-400",
       },
       title: "Middle Full Stack Developer",
       company: "Pulsar AI / Impel",
@@ -153,7 +153,7 @@ const content = {
     {
       colors: {
         bg: "bg-yellow-400",
-        border: "border-yellow-400"
+        border: "border-yellow-400",
       },
       title: "Freelancer",
       company: "Self-employed",

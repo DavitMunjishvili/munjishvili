@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Briefcase, GraduationCap } from "lucide-react"
-import content from "./content"
+import { motion } from "framer-motion";
+import { Briefcase, GraduationCap } from "lucide-react";
+import content from "./content";
 
 export default function Experience() {
   return (
@@ -34,7 +34,9 @@ export default function Experience() {
               >
                 <Briefcase className="w-8 h-8 text-primary mr-4" />
               </motion.div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Work Experience</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                Work Experience
+              </h3>
             </motion.div>
 
             <div className="space-y-12">
@@ -53,10 +55,14 @@ export default function Experience() {
                     whileHover={{ scale: 1.5 }}
                     transition={{ duration: 0.2 }}
                   ></motion.div>
-                  <h4 className="text-xl font-bold text-foreground">{job.title}</h4>
+                  <h4 className="text-xl font-bold text-foreground">
+                    {job.title}
+                  </h4>
                   <div className="flex justify-between text-muted-foreground mb-2">
                     <span>{job.company}</span>
-                    <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">{job.period}</span>
+                    <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+                      {job.period}
+                    </span>
                   </div>
                   <p className="text-muted-foreground">{job.description}</p>
                 </motion.div>
@@ -79,7 +85,9 @@ export default function Experience() {
               >
                 <GraduationCap className="w-8 h-8 text-secondary mr-4" />
               </motion.div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Education</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                Education
+              </h3>
             </motion.div>
 
             <div className="space-y-12">
@@ -98,10 +106,14 @@ export default function Experience() {
                     whileHover={{ scale: 1.5 }}
                     transition={{ duration: 0.2 }}
                   ></motion.div>
-                  <h4 className="text-xl font-bold text-foreground">{edu.degree}</h4>
+                  <h4 className="text-xl font-bold text-foreground">
+                    {edu.degree}
+                  </h4>
                   <div className="flex justify-between text-muted-foreground mb-2">
                     <span>{edu.institution}</span>
-                    <span className="text-sm bg-secondary/10 text-secondary px-3 py-1 rounded-full">{edu.period}</span>
+                    <span className="text-sm bg-secondary/10 text-secondary px-3 py-1 rounded-full">
+                      {edu.period}
+                    </span>
                   </div>
                   <p className="text-muted-foreground">{edu.description}</p>
                 </motion.div>
@@ -111,6 +123,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

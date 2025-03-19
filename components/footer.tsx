@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Github, Linkedin, Mail, Phone, Heart } from "lucide-react"
-import content from "./content"
+import Link from "next/link";
+import { Github, Linkedin, Mail, Phone, Heart } from "lucide-react";
+import content from "./content";
 
 export default function Footer() {
   return (
@@ -16,18 +16,29 @@ export default function Footer() {
             >
               {content.name}
             </Link>
-            <p className="text-sm text-muted-foreground mt-1">&copy; {new Date().getFullYear()} All rights reserved</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              &copy; {new Date().getFullYear()} All rights reserved
+            </p>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <nav className="flex gap-6">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/about"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 About
               </Link>
-              <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Contact
               </Link>
             </nav>
@@ -71,11 +82,11 @@ export default function Footer() {
 
         <div className="mt-6 text-center text-xs text-muted-foreground/60">
           <p className="flex items-center justify-center gap-1">
-            Made with <Heart size={12} className="text-primary" /> using Next.js and Tailwind CSS
+            Made with <Heart size={12} className="text-primary" /> using Next.js
+            and Tailwind CSS
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
