@@ -52,7 +52,10 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
           >
-            {content.name}
+            <span className="hidden md:block">{content.name}</span>
+            <span className={`md:hidden ${isScrolled ? "block " : "hidden"}`}>
+              {content.name}
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
