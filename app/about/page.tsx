@@ -107,7 +107,7 @@ export default function AboutPage() {
                     rel="noopener noreferrer"
                     className="hover:text-blue-400 transition-colors"
                   >
-                    {content.linkedin}
+                    {content.linkedin.replace("https://www.", "")}
                   </a>
                 </motion.div>
 
