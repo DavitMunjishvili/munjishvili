@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# munjishvili.dev - Personal Website
 
-## Getting Started
+This is my personal website and portfolio, showcasing my web development skills, experience, and creative projects. It features interactive 3D elements, dynamic animations, and a focus on modern web technologies.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js:** [https://nextjs.org/](https://nextjs.org/)
+- **React:** [https://react.dev/](https://react.dev/)
+- **Three.js:** [https://threejs.org/](https://threejs.org/)
+- **@react-three/fiber:** [https://docs.pmnd.rs/react-three/fiber](https://docs.pmnd.rs/react-three/fiber)
+- **@react-three/drei:** [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei)
+- **Framer Motion:** [https://www.framer.com/motion/](https://www.framer.com/motion/)
+- **Tailwind CSS:** [https://tailwindcss.com/](https://tailwindcss.com/)
+- **TypeScript:** [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- **Lucide React:** [https://lucide.dev/](https://lucide.dev/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/DavitMunjishvili/munjishvili
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   cd munjishvili
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies using Bun:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   bun install
+   ```
 
-## Deploy on Vercel
+4. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   bun run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+
+The website is designed for interactive exploration.
+Users can navigate through the various sections to learn about me.
+
+## Unique Features
+
+- Interactive 3D model in the hero section.
+- Dynamic animations powered by Framer Motion.
+- Modern, clean design using Tailwind CSS.
+- Showcases web development projects and creative skills.
+
+## Credits
+
+The 3D model of the Retro 80's Phone on the "About Me" page is used under the CC-BY-4.0 license.
+
+"Retro 80's Phone" ([https://sketchfab.com/3d-models/retro-80s-phone-e1a072af323f4d358bad054195353b96](https://sketchfab.com/3d-models/retro-80s-phone-e1a072af323f4d358bad054195353b96)) by DonislavTodorov ([https://sketchfab.com/DonislavTodorov](https://sketchfab.com/DonislavTodorov)) licensed under CC-BY-4.0 ([http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/)).
+
+## License
+
+This project is not currently licensed. All rights reserved.
